@@ -1,5 +1,9 @@
 package org.dsa.linkedlist;
 
+/**
+ * Create a stack using linked list. 
+ *
+ */
 public class StackUsingLinkedList {
 
 	public static void main(String[] args) {
