@@ -3,6 +3,7 @@ package org.dsa.linkedlist;
 public class LinkedList {
 	
 	private Node head;
+	private Node tail;
 	private int size;
 	
 	public LinkedList() {
@@ -17,6 +18,21 @@ public class LinkedList {
 		Node newNode = new Node(data);
 		newNode.next = head;
 		head = newNode;
+		size++;
+		if(size == 1) {
+			tail = head;
+		}
+	}
+	
+	public void addLast(int data) {	
+		if(head == null) {
+			this.addFirst(data);
+			return;
+		}
+		Node newNode = new Node(data);
+		newNode.next = null;
+		tail.next = newNode;
+		tail = tail.next;
 		size++;
 	}
 	
